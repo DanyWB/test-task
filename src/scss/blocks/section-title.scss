@@ -1,0 +1,21 @@
+.section-title {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include tablet() {
+    font-size: 15px;
+  }
+
+
+  &__primary {
+
+    color: #054FEF;
+  }
+
+  &__secondary {
+    color: #05A5C1;
+  }
+}

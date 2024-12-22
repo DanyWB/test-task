@@ -1,0 +1,159 @@
+.difference {
+  padding: 100px 0 150px 0;
+
+
+  &__inner {}
+
+  &__title {
+    margin-bottom: 80px;
+
+
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 290px 290px;
+    gap: 60px 70px;
+    margin-bottom: 80px;
+
+    @include desktop() {
+      gap: 70px 32px;
+    }
+
+    @include mobile() {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 32px;
+    }
+  }
+
+  &__card {
+    box-shadow: 4px 6px 0 #9DD3DD;
+    border-radius: 25px;
+    padding: 41px 35px 16px 46px;
+    position: relative;
+
+    @include mobile-s() {
+      padding: 23px 11px 16px 25px;
+    }
+
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 107px;
+      height: 99px;
+      right: 50px;
+      top: 0;
+      background-image: url("@img/diff-background-icon.svg");
+      background-size: contain;
+
+      @include mobile() {
+
+        width: 72px;
+        height: 68px;
+        right: 10px;
+
+
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      background-color: #F2FCFF;
+
+      @include mobile() {
+        background: rgb(27, 36, 149);
+        background: linear-gradient(138deg, rgba(27, 36, 149, 1) 0%, rgba(34, 48, 213, 1) 100%);
+
+        .difference__card-text {
+          color: #B8FFF1;
+        }
+
+        .difference__card-title {
+          color: white;
+        }
+
+      }
+
+    }
+
+    &:nth-child(3) {
+      @include mobile() {
+        order: 4;
+      }
+    }
+
+    &:nth-child(1) &-title:before {
+      background: url('@img/diff-title-icon-1.svg') center / contain no-repeat;
+    }
+
+    &:nth-child(2) &-title:before {
+      background: url('@img/diff-title-icon-2.svg') center / contain no-repeat;
+    }
+
+    &:nth-child(3) &-title:before {
+      background: url('@img/diff-title-icon-3.svg') center / contain no-repeat;
+    }
+
+    &:nth-child(4) &-title:before {
+      background: url('@img/diff-title-icon-4.svg') center / contain no-repeat;
+    }
+  }
+
+  &__card-title {
+    position: relative;
+    font-size: 32px;
+    height: 52px;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    padding-bottom: 25px;
+    margin-bottom: 14px;
+
+    @include tablet() {
+      font-size: 22px;
+      height: 44px;
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 100%;
+
+      @include tablet() {
+        width: 35px;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 1px;
+      background-color: #9ABCD8;
+      left: 0;
+      bottom: 0;
+
+      @include tablet() {
+        width: 35px;
+      }
+    }
+
+
+
+  }
+
+  &__card-text {
+    color: #27375C;
+    font-size: 18px;
+
+    @include tablet() {
+      font-size: 14px;
+    }
+  }
+}
