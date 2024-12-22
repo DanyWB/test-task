@@ -1,0 +1,151 @@
+.hero {
+  padding-top: var(--hedaer-height);
+  background: rgb(23, 30, 104);
+  background: linear-gradient(75deg, rgba(23, 30, 104, 1) 0%, rgba(31, 43, 177, 1) 55.5%, rgba(7, 51, 112, 1) 56%, rgba(7, 51, 112, 1) 100%);
+  color: white;
+  border-radius: 0 0 30px 30px;
+  height: 863px;
+  z-index: 500;
+  overflow: hidden;
+  position: relative;
+
+  @include tablet() {
+    height: auto;
+    background: rgb(28, 36, 124);
+  }
+
+  &__inner {}
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include tablet() {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    padding-top: 85px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 950px;
+      height: 850px;
+      background: url("@img/hero-background-box-2.png") no-repeat;
+      right: -100px;
+      top: -100px;
+      z-index: -1;
+
+      @include desktop() {
+
+        right: 0;
+        top: -150px;
+      }
+
+      @include tablet() {
+
+        display: none;
+      }
+
+
+    }
+  }
+
+  &__title {
+    font-size: 64px;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    @include desktop() {
+      font-size: 46px;
+    }
+
+    @include tablet() {
+      font-size: 32px;
+      text-align: center;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 6px;
+      border-radius: 15px;
+      background-color: #3CF2FF;
+      bottom: 0;
+      left: 0;
+
+      @include tablet() {
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    max-width: 580px;
+    line-height: 120%;
+    margin-bottom: 60px;
+
+    @include tablet() {
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 30px;
+      margin-inline: auto;
+    }
+  }
+
+  &__link {
+    align-self: flex-start;
+
+    @include tablet() {
+      align-self: center;
+    }
+  }
+
+  &__image {
+    position: relative;
+
+    & img {
+      height: 100%;
+      object-fit: contain;
+      position: relative;
+      z-index: 200;
+
+
+      @include tablet() {
+        margin: 0 auto;
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 950px;
+      height: 850px;
+      background: url("@img/hero-background-box.png") no-repeat;
+      left: 0;
+      top: 0;
+      z-index: -1;
+
+      @include tablet() {
+        background: url("@img/hero-background-box-2.png") no-repeat;
+        left: 50%;
+        top: 50%;
+        transform: translate(-40%, -61%);
+      }
+
+    }
+
+
+  }
+}

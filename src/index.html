@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    @@include('html/head.html', {"title": "home"})
+  </head>
+
+  <body class="page-body">
+    <header class="header">
+      <div class="header__inner container container--wide">
+        <a href="#" class="header__logo">
+          <img src="img/logo-white.png" alt="" class="header__logo-icon" />
+          <img src="img/logo-text-white.png" alt="" class="header__logo-text" />
+        </a>
+        <nav class="header__nav">
+          <button type="button" class="header__nav-close-button"></button>
+          <ul class="header__list">
+            <li class="header__item header__item--drop-down">
+              <a class="header__link" href="#">services</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">Industries</a>
+            </li>
+            <li class="header__item header__item--drop-down">
+              <a class="header__link" href="#">company</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">blog</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="header__burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero__inner container">
+          <div class="hero__flex">
+            <div class="hero__content">
+              <h1 class="hero__title">
+                Penetration <br />
+                Testing Services
+              </h1>
+              <p class="hero__text">
+                Penetration Testing Services by humans, not scanners. Revealing
+                your weaknesses and vulnerabilities to ensure reliable and
+                robust protection.
+              </p>
+              <a href="#" class="hero__link link">Talk to us</a>
+            </div>
+            <div class="hero__image">
+              <img src="img/hero-image.png" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
